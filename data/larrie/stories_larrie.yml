@@ -1,0 +1,48 @@
+stories:
+
+- story: happy path exchange
+  steps:
+  - intent: exchange_shoe_size
+  - action: simple_shoe_exchange_form
+  - active_loop: simple_shoe_exchange_form
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+  - action: utter_shoe_exchange
+  - action: action_shoe_exchange
+  - slot_was_set:
+      - stock_available: true
+  - action: utter_confirm_exchange
+  - intent: affirm
+  - action: simple_shoe_exchange_form_2
+  - active_loop: simple_shoe_exchange_form_2
+  - active_loop: null
+  - action: exchange_shoe_sizes_final_action
+  - action: utter_thanks
+  - action: action_reset_all_slots
+
+- story: exchange denied due to no stock
+  steps:
+  - intent: exchange_shoe_size
+  - action: simple_shoe_exchange_form
+  - active_loop: simple_clause_query_form
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+  - action: utter_shoe_exchange
+  - action: action_shoe_exchange
+  - slot_was_set:
+      - stock_available: false
+  - action: utter_no_stock
+  - action: action_reset_all_slots
+
+- story: check order status
+  steps:
+  - intent: check_order_status
+  - action: simple_check_order_form
+  - active_loop: simple_check_order_form
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_check_order_status
+  - action: action_reset_all_slots

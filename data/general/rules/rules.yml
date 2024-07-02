@@ -1,0 +1,12 @@
+version: "3.1"
+
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: bye
+  - action: utter_goodbye
+
+- rule: Greet user in Telegram
+  steps:
+  - intent: start_telegram
+  - action: utter_start

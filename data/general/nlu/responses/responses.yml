@@ -1,0 +1,36 @@
+version: "3.1"
+
+responses:
+  utter_out_of_scope/non_english:
+  - text: "I only understand English, I'm sorry."
+
+  utter_out_of_scope/other:
+  - text: "I can't help you with that, I'm sorry."
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_start:
+  - text: "You are currently talking to EB in Telegram!"
+  - text: "Welcome to EB AI"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.pinimg.com/736x/55/19/e9/5519e92f2610f02ffcedae181613bbfa.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_possibilities:
+  - text: |
+      You can discuss me about:
+      - Size exchange
+      - Product defect
+      - Any complaint
+      - Enquire about nearest store

@@ -1,0 +1,43 @@
+responses:
+
+  utter_shoe_exchange:
+  - text: "i will now process your shoe exchange"
+
+  utter_ask_customer_name:
+  - text: "What is your name?"
+
+  utter_ask_customer_phone:
+  - text: "What is your phone number?"
+
+  utter_ask_purchase_date:
+  - text: "When did you make the purchase? DD/MM/YYYY"
+
+  utter_ask_purchase_outlet:
+  - text: "Where did you make the purchase?"
+
+  utter_ask_shoe_model:
+  - text: "What is the model of the shoe?"
+
+  utter_ask_shoe_size:
+  - text: "What is the size of the shoe? (In US Size)"
+
+  utter_ask_shoe_color:
+  - text: "What is the color of the shoe?"
+
+  utter_thanks:
+  - text: "Thank you for your time"
+
+  utter_ask_shoe_exchange_address:
+  - text: "What is your address for the shoe exchange?"
+
+  utter_no_stock:
+  - text: "Sorry, we do not have the stock for the shoe exchange"
+
+  utter_confirm_exchange:
+  - text: "Do you want to continue with the exchange?"
+
+  utter_ask_order_id:
+  - text: "What is your order ID?"
+
+  utter_ask_new_shoe_size:
+  - text: "What is the new shoe size you want?"

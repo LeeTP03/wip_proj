@@ -1,0 +1,152 @@
+version: "3.1"
+
+entities:
+- clause_to_know
+- customer_name
+- customer_phone
+- purchase_date
+- purchase_outlet
+- shoe_model
+- shoe_size
+- shoe_color
+- shoe_exchange_address
+- stock_available
+- order_id
+
+slots:
+  clause_to_know:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: clause_to_know
+  customer_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: customer_name
+  customer_phone:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: customer_phone
+  purchase_date:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: purchase_date
+  purchase_outlet:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: purchase_outlet
+  shoe_model:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: shoe_model
+  shoe_size:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: shoe_size
+  shoe_color:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: shoe_color
+  shoe_exchange_address:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: shoe_exchange_address
+  stock_available:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: stock_available
+  order_id:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: order_id
+  new_shoe_size:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: shoe_size
+
+forms:
+  simple_clause_query_form:
+    required_slots:
+      - clause_to_know
+  simple_shoe_exchange_form:
+    required_slots:
+      - customer_name
+      - customer_phone
+      - purchase_date
+      - purchase_outlet
+      - shoe_model
+      - shoe_size
+      - shoe_color
+      - new_shoe_size
+  simple_shoe_exchange_form_2:
+    required_slots:
+      - shoe_exchange_address
+  simple_check_order_form:
+    required_slots:
+      - customer_name
+      - customer_phone
+      - purchase_date
+      - order_id
+
+intents:
+  - start_telegram
+  - out_of_scope
+  - affirm
+  - react_positive
+  - react_negative
+  - bye
+  - canthelp
+  - deny
+  - explain
+  - thank
+  - greet
+  - know_clause
+  - query_clause
+  - exchange_shoe_size
+  - provide_shoe_model
+  - provide_shoe_color
+  - provide_shoe_size
+  - provide_purchase_outlet
+  - provide_purchase_date
+  - provide_customer_name
+  - provide_customer_phone
+  - provide_shoe_exchange_address
+  - provide_order_id
+  - activate_form_2
+  - check_order_status
+
+actions:
+- utter_ask_clause
+- get_clause_information
+- get_layman_clause_information
+- action_shoe_exchange
+- action_check_order_status
+- action_reset_all_slots
+- exchange_shoe_sizes_final_action
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

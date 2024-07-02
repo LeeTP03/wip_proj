@@ -1,0 +1,54 @@
+rules:
+
+- rule: Activate shoe exchange form
+  steps:
+  - intent: exchange_shoe_size
+  - action: simple_shoe_exchange_form
+  - active_loop: simple_shoe_exchange_form
+
+- rule: Submit shoe exchange form 
+  condition:
+  - active_loop: simple_shoe_exchange_form
+  steps:
+  - action: simple_shoe_exchange_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_shoe_exchange
+  - action: action_shoe_exchange
+  wait_for_user_input: false
+
+- rule: Activate shoe exchange form 2
+  steps:
+  - intent: activate_form_2
+  - action: simple_shoe_exchange_form_2
+  - active_loop: simple_shoe_exchange_form_2
+
+- rule: Submit shoe exchange form 2
+  condition:
+  - active_loop: simple_shoe_exchange_form_2
+  steps:
+  - action: simple_shoe_exchange_form_2
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: exchange_shoe_sizes_final_action
+  - action: utter_thanks
+  wait_for_user_input: false
+
+- rule: Activate check order form
+  steps:
+  - intent: check_order_status
+  - action: simple_check_order_form
+  - active_loop: simple_check_order_form
+
+- rule: Submit check order form
+  condition:
+  - active_loop: simple_check_order_form
+  steps:
+  - action: simple_check_order_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_check_order_status
+  wait_for_user_input: false

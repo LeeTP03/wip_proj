@@ -1,0 +1,88 @@
+nlu:
+
+- intent: exchange_shoe_size
+  examples: |
+    - i would like to exchange shoe sizes for my shoe
+    - i want to exchange my shoe size
+    - i want to exchange my shoe size for a different size
+    - shoe exchange size
+    - exchange shoe sizes
+
+- intent: provide_shoe_model
+  examples: |
+    - [sandals](shoe_model)
+    - [sneakers](shoe_model)
+    - [slippers](shoe_model)
+    - [boots](shoe_model)
+    - [loafers](shoe_model)
+    - [heels](shoe_model)
+    - [flats](shoe_model)
+
+- intent: provide_shoe_color
+  examples: |
+    - [red](shoe_color)
+    - [blue](shoe_color)
+    - [green](shoe_color)
+    - [yellow](shoe_color)
+    - [black](shoe_color)
+    - [white](shoe_color)
+
+- intent: provide_shoe_size
+  examples: |
+    - [size 5](shoe_size)
+    - [size 6](shoe_size)
+    - [size 7](shoe_size)
+    - [size 8](shoe_size)
+    - [size 9](shoe_size)
+    - [size 10](shoe_size)
+
+- intent: provide_purchase_outlet
+  examples: |
+    - [physical store](purchase_outlet)
+    - [online store](purchase_outlet)
+
+- intent: provide_purchase_date
+  examples: |
+    - [31/12/2024](purchase_date)
+    - [04/06/2024]](purchase_date)
+    - [12/02/2024](purchase_date)
+    - [23/07/2023](purchase_date)
+
+- intent: provide_customer_name
+  examples: |
+    - [John Doe](customer_name)
+    - [Jane Doe](customer_name)
+    - [Alice](customer_name)
+    - [Bob](customer_name)
+
+- intent: provide_customer_phone
+  examples: |
+    - [0123456789](customer_phone)
+    - [9876543210](customer_phone)
+    - [0123456789](customer_phone)
+    - [9876543210](customer_phone)
+
+- intent: provide_shoe_exchange_address
+  examples: |
+    - [Suite 11.01 11.05 11Th Floor Wisma Cosway Jalan Raja Chulan, Kuala Lumpur, 50200](shoe_exchange_address)
+    - [79-2 Susur Larkin Perdana 1 Larkin Perdana, Johor Bahru, 80350](shoe_exchange_address)
+    - [102 Jalan Bangsar, Kuala Lumpur, 59200](shoe_exchange_address)
+    - [1-1-1, Jalan Setia Prima U13/A, Setia Alam, Shah Alam, 40170](shoe_exchange_address)
+    - [166-169 Kemena Commercial Complex Jalan Tanjung Batu, Bintulu, 97000](shoe_exchange_address)
+
+
+- intent: activate_form_2
+  examples: |
+    - activate form 2
+
+- intent: check_order_status
+  examples: |
+    - check order status
+    - check status of order
+    - check order status please
+    - i want to check my order status
+
+- intent: provide_order_id
+  examples: |
+    - [order 1](order_id)
+    - [2](order_id)
