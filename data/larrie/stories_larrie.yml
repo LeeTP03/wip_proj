@@ -25,7 +25,7 @@ stories:
   steps:
   - intent: exchange_shoe_size
   - action: simple_shoe_exchange_form
-  - active_loop: simple_clause_query_form
+  - active_loop: simple_shoe_exchange_form
   - active_loop: null
   - slot_was_set:
       - requested_slot: null
